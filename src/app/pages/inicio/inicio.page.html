@@ -1,21 +1,26 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first"></ion-menu-button>
+    </ion-buttons>
+
     <ion-title>inicio</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  
+  <ion-list>
 
-<ion-button routerLink="/alert">
-  Alert
-</ion-button>
-
-
-<ion-button routerLink="/acction-sheet">
-  Aacction sheetlert
-</ion-button>
-
+    <ion-item *ngFor = "let c of componentes | async"
+              [routerLink] = "c.redirectTo">
+              
+      <ion-icon [name]="c.icon" slot="start"></ion-icon>
+      {{ c.name }}
+    </ion-item>
+  </ion-list>
 
 
 

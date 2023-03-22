@@ -1,5 +1,17 @@
 <app-header titulo="alert"></app-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+
+    <ion-button (click)="presentAlert()" expand="block">
+        Alert normal
+    </ion-button>
+
+    <ion-button (click)="presentAlertMultipleButtons()" expand="block">
+        Alert multiButtons
+    </ion-button>
+
+    <ion-button (click)="presentAlertPrompt()" expand="block">
+        Alert Prompsts
+    </ion-button>
 
 </ion-content>
